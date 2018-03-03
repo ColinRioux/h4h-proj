@@ -1,9 +1,16 @@
 // Express entry point file
-const express = require('express');
-const app = express();
+var express = require('express');
+var app = express();
+var bodyParser = require('body-parser');
 
-app.get('/', function(req,res) {
-    res.send('Hi Charles <3');
+
+var route_handler = require('./src/handlers/route');
+app.use('/', route_handler);
+
+app.use(function(req, res) {
+    var error = new Error('Not Found');
+    error.status = 404;
+    res.send(error);
 });
 
 app.listen(3000, function() {

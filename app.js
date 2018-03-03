@@ -15,6 +15,5 @@ app.use(function(req, res) {
 
 app.listen(3000, function() {
     console.log('App running on local host port 3000');
-    console.log('Either localhost:3000');
-    console.log('Or 127.0.0.1:3000');
+    console.log('Either localhost:3000 Or 127.0.0.1:3000');
 });

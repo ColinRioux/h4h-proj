@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/ColinRioux/h4h-proj/issues"
   },
-  "homepage": "https://github.com/ColinRioux/h4h-proj#readme"
+  "homepage": "https://github.com/ColinRioux/h4h-proj#readme",
+  "dependencies": {
+    "express": "4.16.2",
+    "npm": "5.7.1"
+  }
 }

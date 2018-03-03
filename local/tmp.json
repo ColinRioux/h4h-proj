@@ -1,3 +1,15 @@
 {
-    
+    "requests": [
+        {
+            "id": 0,
+            "category": [],
+            "tags": [],
+            "title": "Example title",
+            "description": "Long ass description",
+            "requirements": [],
+            "location": "",
+            "size": 3,
+            "contact": ""
+        }
+    ]    
 }

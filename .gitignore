@@ -1,3 +1,7 @@
 # Node stuff
 node_modules/
 package-lock.json
+
+
+# Weird apple stuff if you use editors
+.DS_Store

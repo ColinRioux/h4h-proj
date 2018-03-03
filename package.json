@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/ColinRioux/h4h-proj#readme",
   "dependencies": {
+    "body-parser": "1.18.2",
     "express": "4.16.2",
     "npm": "5.7.1"
   }

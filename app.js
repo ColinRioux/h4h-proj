@@ -4,7 +4,7 @@ var app = express();
 var bodyParser = require('body-parser');
 
 
-var route_handler = require('./src/handlers/route');
+var route_handler = require('./public/route');
 app.use('/', route_handler);
 
 app.use(function(req, res) {

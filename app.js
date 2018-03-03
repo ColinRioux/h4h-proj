@@ -2,10 +2,12 @@
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
+var path = require('path');
 
 
 var route_handler = require('./router');
 app.use('/', route_handler);
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(function(req, res) {
     var error = new Error('Not Found');

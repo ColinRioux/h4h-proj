@@ -29,3 +29,12 @@ div.jobTag {
     padding-left: 10px;
     padding-right: 10px;
 }
+
+#feed {
+    padding-left: 50px;
+    padding-top: 20px;
+}
+
+.searchUnit {
+    padding-left: 50px;
+}

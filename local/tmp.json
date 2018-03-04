@@ -10,6 +10,17 @@
             "location": "",
             "size": 3,
             "contact": ""
+        },
+        {
+            "id": 1,
+            "category": [],
+            "tags": [],
+            "title": "Example title 2",
+            "description": "Long ass description",
+            "requirements": [],
+            "location": "",
+            "size": 3,
+            "contact": ""
         }
     ]    
 }

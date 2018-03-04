@@ -1,1 +1,30 @@
-{"requests":[{"id":0,"category":[],"tags":[],"title":"Example title","description":"Long ass description","requirements":[],"location":"","size":3,"contact":""},{"id":1,"category":["food","water"],"tags":"","title":"","description":"test","location":"","size":"Select Size...","contact":""},{"id":2,"category":["water","evacuation","clothes"],"tags":"food, hah","title":"Example Title","description":"sldjkf\r\nsdklfjs\r\nsdkfjl","location":"Santa Clara","size":"3","contact":"crioux@scu.edu"}]}
+{
+    "requests": [
+        {
+            "id": 0,
+            "category": [],
+            "tags": ["Food", "Evac"],
+            "title": "Example title",
+            "description": "Long ass description",
+            "requirements": [],
+            "location": "",
+            "size": 3,
+            "contact": "",
+            "claimed": "Red Cross",
+            "status": "Delivered"
+        },
+        {
+            "id": 1,
+            "category": [],
+            "tags": ["Clothes", "Food"],
+            "title": "Example title 2",
+            "description": "Long ass description",
+            "requirements": [],
+            "location": "",
+            "size": 3,
+            "contact": "",
+            "claimed": "Red Cross",
+            "status": "En Route"
+        }
+    ]
+}

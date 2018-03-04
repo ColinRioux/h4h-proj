@@ -15,3 +15,16 @@ window.onclick = function(event){
     modal.style.display = "none";
   }
 }
+
+$ = require('jquery');
+var fs = require('fs');
+$(document).ready(function(){
+  var file = fs.readFileSync('./local/tmp.json', 'utf8');
+  var temp = JSON.parse(file);
+  document.getElementById("jobTitle").innerHTML = temp.requests[0].title;
+  document.getElementById("organization").innerHTML = temp.requests[0].claimed;
+  document.getElementById("deliveryStatus").innerHTML = temp.requests[0].status;
+  // $('.jobTitle').append("hi");
+  // $('.organization').append('<p>' + temp.requests[0].claim + '</p>');
+  // $('.deliveryStatus').append('<p>' + temp.requests[0].status + '</p>');
+});

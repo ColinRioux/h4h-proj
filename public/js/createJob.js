@@ -10,4 +10,8 @@ $(document).ready(function() {
             text: categories[c] 
         }));
     }
+
+    // var data = fs.readFileSync('./local/tmp.json', 'utf8');
+    // var interact = JSON.parse(data);
+    // $('body').html(interact.requests[0].title);
 });

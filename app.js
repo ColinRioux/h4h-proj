@@ -14,7 +14,7 @@ app.use('/', route_handler);
 
 var files = ['createJob'];
 for (var f in files) {
-    browserify('./public/js/' + files[f] + '.js').transform({global: true}).transform('uglifyify').transform('brfs').bundle().pipe(fs.createWriteStream('./public/js/dist/' + files[f] + '.min.js'));
+    browserify('./public/js/' + files[f] + '.js').transform({global: true}, 'uglifyify').transform('brfs').bundle().pipe(fs.createWriteStream('./public/js/dist/' + files[f] + '.min.js'));
 }
 
 

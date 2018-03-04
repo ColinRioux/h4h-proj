@@ -19,12 +19,12 @@ $(document).ready(function() {
 
 function buildFeed(selector) {
     $('#showClaimedJobs').css('visibility', 'visible');
-    $.getJSON(window.location.href + 'requests/', function(data) {
+    $.getJSON(window.location.origin + '/requests/', function(data) {
         var count = data.count;
         var tmp = [];
         for (var c = 1; c <= count; c++) {
             $.ajax({
-                url: window.location.href + 'requests/' + c,
+                url: window.location.origin + '/requests/' + c,
                 dataType: 'json',
                 async: false,
                 success: function(data) {

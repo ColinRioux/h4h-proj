@@ -10,6 +10,8 @@ var sqliteJson = require('sqlite-json');
 var db = new sqlite3.Database('./local/main.db');
 var exp = sqliteJson(db);
 
+// var jquery = require('jquery');
+
 router.get('/create', function(req, res) {
     res.sendFile(path.join(__dirname + '/views/jobs/create.html'));
 });
@@ -19,6 +21,8 @@ router.get('/feeds', function(req, res) {
 });
 
 router.get('/job', function(req, res) {
+    // var file = fs.readFileSync('./views/expandedJobView.html', 'utf8');
+    // var p = jquery.parseHtml(file);
     res.sendFile(path.join(__dirname + '/views/expandedJobView.html'));
 });
 
@@ -32,10 +36,6 @@ router.post('/create/post', function(req,res) {
     }
     db.run('INSERT INTO requests (category, tags, title, description, location, size, contact, time, claim) VALUES (?,?,?,?,?,?,?,?,?)', req.body.categoriesSelector.join(','), req.body.tagsInput, req.body.titleInput, req.body.descriptionInput, req.body.locationInput, parseInt(req.body.jobSizeSelector), req.body.contactInput, new Date(Date.now()).toLocaleString(), 'null');
     res.redirect('/');
-});
-
-router.get('/job', function(req, res) {
-    res.sendFile(path.join(__dirname + '/views/expandedJobView.html'));
 });
 
 router.get('/', function(req, res) {

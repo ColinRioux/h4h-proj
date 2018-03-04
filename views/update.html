@@ -1,27 +1,32 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="../public/css/update.css" type="text/css">
-    </head>
-    <body>
-      <script type="text/javascript" src="/js/update.js"></script>
-      <h2> Update Modal</h2>
-      <button id="updateBtn">Update Modal</button>
-      <div id="updateModal" class=updateModal>
-          <div class="update-content">
-            <div class="update-header">
-              <span class="close">&times;</span>
-              <h1>Update</h1>
-            </div>
-            <div class="update-body">
-              <h2>Receptor:</h2>
-              <p>   Red Cross</p>
-              <h2>Status:</h2>
-              <p>   Request Recieved</p>
-              <p>   En Route</p>
-              <p>   Arrived</p>
-              <p>   Distributed</p>
-            </div>
-        </div>
-    </body>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/update.css" type="text/css">
+</head>
+<body>
+  <h2>Update Modal</h2>
+  <button id="updateBtn">Update Modal</button>
+  <div id="updateModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <h1>Update</h1>
+      </div>
+      <div class="modal-body">
+        <h2>Receptor:</h2>
+        <p class="indent">Red Cross</p>
+        <h2>Status:</h2>
+        <p class="indent">Request Recieved</p>
+        <p class="indent">En Route</p>
+        <p class="indent">Arrived</p>
+        <p class="indent">Distributed</p>
+      </div>
+      <div class="modal-footer">
+        <h3>Modal Footer</h3>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="js/update.js"></script>
+</body>
 </html>

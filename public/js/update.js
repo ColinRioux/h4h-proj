@@ -1,8 +1,7 @@
 var modal = document.getElementById('updateModal');
-var btn = document.getElementById("updateBtn");
 var span = document.getElementsByClassName("close")[0];
 
-btn.onclick = function() {
+document.onload = function() {
   modal.style.display = "block";
 }
 

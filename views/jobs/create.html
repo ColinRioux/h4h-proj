@@ -8,65 +8,64 @@
 </head>
 <body>
     <script type="text/javascript" src="/js/dist/createJob.min.js"></script>
-    <section class="section">
-        <div class="container">
-            <div class="row justify-content-start">
-                <div class="col-md-6">
-                    <form action="/create/post" method="POST" class="form-group">
-                        <div class="form-group row">
-                            <label for="titleInput" class="col-sm-2 col-form-label">Title</label>
-                            <div class="col-sm-6">
-                                <input type="text" class="form-control" id="titleInput" placeholder="Enter a short title..." name="titleInput"> 
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="descriptionInput" class="col-sm-2 col-form-label">Description</label>
-                            <div class="col-sm-6">
-                                <textarea id="descriptionInput" class="form-control" rows="3" placeholder="Enter a description..." required name="descriptionInput"></textarea>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="jobSizeSelector" class="col-sm-2 col-form-label">Job Size</label>
-                            <div class="col-sm-6">
-                                <select class="form-control" id="jobSizeSelector" name="jobSizeSelector">
-                                    <!-- Will do the appending in createJob.js -->
-                                    <option selected>Select Size...</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="categoriesSelector" class="col-sm-2 col-form-label">Category</label>
-                            <div class="col-sm-6">
-                                <select multiple class="form-control" id="categoriesSelector" name="categoriesSelector">
-                                    <!-- Will do the appending in createJob.js -->
-                                    <option selected>Select Categories...</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="locationInput" class="col-sm-2 col-form-label">Location</label>
-                            <div class="col-sm-6">
-                                <input type="text" class="form-control" id="locationInput" placeholder="Enter Location..." name="locationInput"> 
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="contactInput" class="col-sm-2 col-form-label">Contact</label>
-                            <div class="col-sm-6">
-                                <textarea type="text" class="form-control" id="contactInput" placeholder="Optional: Enter Contact Information..." name="contactInput"></textarea>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="tagsInput" class="col-sm-2 col-form-label">Tags</label>
-                            <div class="col-sm-6">
-                                <input type="text" class="form-control" id="tagsInput" placeholder="Add tags separated by commas..." name="tagsInput">
-                            </div>
-                        </div>
-                      </div>
-                      <button type="submit" class="btn btn-outline-primary" id="createJobButton">Create</button>
-                    </form>
+    <div class="container" style="padding-left:200px;padding-right:200px;padding-top:50px">
+        <form action="/create/post" method="POST">
+            <div class="field">
+                <label class="label">Title</label>
+                <div class="control">
+                    <input class="input" id="titleInput" name="titleInput" type="text" placeholder="Enter a short title" required>
                 </div>
             </div>
-        </div>
-    </section>
+            <div class="field">
+                <label class="label">Description</label>
+                <div class="control">
+                    <textarea class="textarea" id="descriptionInput" name="descriptionInput" placeholder="Enter a description..." required></textarea>
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Job Size</label>
+                <div class="control">
+                    <div class="select">
+                        <select id="jobSizeSelector" name="jobSizeSelector" required>
+                            <option selected>Select Size...</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Categories</label>
+                <div class="control">
+                    <div class="select is-multiple">
+                        <select multiple id="categoriesSelector" name="categoriesSelector" required>
+                            <option selected>Select Size...</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Location</label>
+                <div class="control">
+                    <input class="input" id="locationInput" name="locationInput" type="text" placeholder="Enter your Location..." required>
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Contact</label>
+                <div class="control">
+                    <textarea class="textarea" id="contactInput" name="contactInput" placeholder="Enter Contact Information..." required></textarea>
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Tags</label>
+                <div class="control">
+                    <input class="input" id="tagsInput" name="tagsInput" type="text" placeholder="Add tags separated by commas..." required>
+                </div>
+            </div>
+            <div class="field">
+                <button type="submit" class="button is-success" id="createJobButton">Create</button>
+                <a id="back" href="/" class="button is-link">Return</a>
+            </div>
+        </form>
+        <br/>
+    </div>
 </body>
 </html>

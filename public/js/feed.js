@@ -34,7 +34,7 @@ function buildFeed(selector) {
         for (var i in tmp) {
             if(tmp[i].tags.indexOf(search) > -1 || search == null || search == ""){
                 var request = tmp[i];
-                $(selector).append('<div class="box ' + request.id +'" style="width:50%;"><h1 class="title is-4">'+request.title+'</h1><ul class="bxlc"><li><i class="fas fa-users"></i> Size:' + request.size + '</li><li><i class="fas fa-map-marker"></i> Location: ' + request.location + '</li></ul><br/><p style="padding-top:2%">' + request.description + '</p><br/><ul class="tgclist"></ul><br/><a href="/update" class="button is-info">Inspect</a></div>');
+                $(selector).append('<div class="box ' + request.id +'" style="width:50%;"><h1 class="title is-4">'+request.title+'</h1><ul class="bxlc"><li><i class="fas fa-users"></i> Size:' + request.size + '</li><li><i class="fas fa-map-marker"></i> Location: ' + request.location + '</li></ul><br/><p style="padding-top:2%">' + request.description + '</p><br/><ul class="tgclist"></ul><br/><a href="/job" class="button is-info">Inspect</a></div>');
                 if (typeof request.category === "string") {
                     var a = [];
                     a.push(request.category);

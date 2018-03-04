@@ -3,6 +3,7 @@ var router = express.Router();
 var path = require('path');
 var bodyParser = require('body-parser');
 var fs = require('fs');
+var browserify = require('browserify');
 
 router.get('/create', function(req, res) {
     res.sendFile(path.join(__dirname + '/views/jobs/create.html'));
@@ -26,10 +27,19 @@ router.post('/create/post', function(req,res) {
         status: null
     });
     fs.writeFile('./local/tmp.json', JSON.stringify(cur));
-    res.redirect('/create');
+    // browserify('./public/js/feed.js').transform({global: true}, 'uglifyify').transform('brfs').bundle().pipe(fs.createWriteStream('./public/js/dist/feed.min.js'));
+    res.redirect('/');
+});
+
+router.get('/job', function(req, res) {
+    res.sendFile(path.join(__dirname + '/views/expandedJobView.html'));
 });
 
 router.get('/', function(req, res) {
+    // browserify('./public/js/feed.js').transform({global: true}, 'uglifyify').transform('brfs').bundle().pipe(fs.createWriteStream('./public/js/dist/feed.min.js'));
+    // res.set('Content-Type', 'text/html');
+    // var html = fs.readFileSync('./views/feeds.html');
+    // res.send(html);
     res.sendFile(path.join(__dirname + '/views/feeds.html'));
 });
 

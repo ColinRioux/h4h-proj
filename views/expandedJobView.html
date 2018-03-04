@@ -2,16 +2,18 @@
 <html>
 <head>
   <title>Job Title</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+
   <meta name="Full Job Description" content="Full Job Description Page">
   <meta name="keywords" content="[insert tags here]">
 
-  <link rel="stylesheet" type="text/css" href="css/expandedJobView.css">
+  <link rel="stylesheet" type="text/css" href="/css/expandedJobView.css">
 
   </style>
 
-
   <script type="text/javascript">
-<!--
     function toggle_visibility(id) {
        var e = document.getElementById(id);
        if(e.style.display == 'block')
@@ -19,7 +21,6 @@
        else
           e.style.display = 'block';
     }
-//-->
 </script>
 
 
@@ -28,87 +29,101 @@
 
 
 <body>
+  <!-- The button that opens the popup goes here -->
+    <div id="wrapper">
+        <p><a href="javascript:void(0)" onclick="toggle_visibility('popupBox')";>Sample Job</p>
+    </div>
+
+  <script type="text/javascript" src="/js/dist/expandedJobView.min.js"></script>
 
   <div id="popupBox" class="popupPosition">
     <div id="popupWrapper">
       <div id="popupContainer">
           <div id="closeJob">
-            <p><a href="javascript:void(0)" onclick="toggle_visibility('popupBox')"><img src="/img/cancelButton.png"></a></p>
+            <p><a href="javascript:void(0)" onclick="toggle_visibility('popupBox')" class="delete is-medium" ></a></p>
           </div>
           <header>
             <!-- Job Title -->
             <div class="jobTitle">
-                <h1>Job Title Here</h1>
+                <!-- <h1>Job Title Here</h1> -->
             </div>
+
             <!-- Job Size -->
-            <div id="jobSize">
-              <p>This is an XL job.</p>
+            <div id="jobSize" class="notification is-primary">
+              <!-- <p>Job size: 3</p> -->
             </div>
 
             <div class="clr"></div>
 
             <!-- Job Description -->
             <div class="jobDescription">
-              <p>[Job Description]: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <!-- <p>[Job Description]: job description here</p> -->
             <div>
           </header>
 
-          <div style;"margin-top:20px;"></div>
+          <div style;"margin-top:50px;"></div>
 
           <!-- Categories are: Transportation, Food, Water, Clothing, Power, Evac -->
           <div id="jobCategory">
-              <h3>Category: [insert category here]</h3>
+              <!-- <h3>Category: [insert category here]</h3> -->
           </div>
 
           <div style;"margin-top:20px;"></div>
 
+
             <!-- Requirements -->
+            <!--
             <div class="jobRequirements">
               <b><strong>Job Requirements</strong></b>
                 <ul>
-                  <li>Requirement 1 hello my name is Tim and I am absolute shit at Hackathons, like what the fuck am I doing, but it's ok, we got this fam.</li>
+                  <li>Requirement 1</li>
                   <li>Requirement 2</li>
                   <li>Requirement 3</li>
                 </ul>
-            </div>
+            </div> -->
 
 
           <!-- Location -->
           <div id="jobLocation">
-            <p>Job Location: <br> [insert location here]</p>
+            <!-- <p><b><strong>Job Location: </strong></b><br> [insert location here]</p> -->
+          </div>
+
+        
+          <!-- Contact Info -->
+          <div class="contactInformation">
+            <!-- <h4>Requesting Organization Contact Information:</h4> -->
+              <!--<ul>
+                <li>Country: [country]</li>
+                <li>Phone Number: [phone number]</li>
+                <li>Email: [email]</li>
+              </ul> -->
           </div>
 
           <div class="clr"></div>
 
-          <!-- Contact Info -->
-          <div class="contactInformation">
-            <h4>Requesting Organization Contact Information:</h4>
-              <ul>
-                <li>Country: [country]</li>
-                <li>Phone Number: [phone number]</li>
-                <li>Email: [email]</li>
-              </ul>
-          </div>
-
-
           <!-- Confirm Button -->
           <div class="confirmJob">
-            <input class="button" type="submit" value="Confirm" name = "">
+            <input class="button is-dark" type="submit" value="Confirm" name = "">
           </div>
-
-
 
           <div class="clr"></div>
 
           <br>
 
           <!-- Tags -->
-          <small>Tags: [insert tags here]</small>
+          <div class="tags">
+            <p>Tags: </p>
+              <!-- <small>Tags: [insert tags here]</small> -->
+          </div>
+
           <br>
-          <small>Posted on [Date]</small>
+          <div class="date">
+              <!-- <small>Posted on [Date]</small> -->
+          </div>
+
 
           <footer id="mainFooter">
-            <p>Copyright &copy; 2018, Colin, Charles, Melanie, Horatio, Tim - H4H at SCU</p>
+            <small>Copyright &copy; 2018, Colin, Charles, Melanie, Horatio, Tim - H4H at SCU</small>
           </footer>
         </body>
 
@@ -116,25 +131,4 @@
     </div> <!-- popupWrapper end -->
   </div> <!-- popupBox end -->
 
-<!-- The button that opens the popup goes here -->
-  <div id="wrapper">
-      <p><a href="javascript:void(0)"  onclick="toggle_visibility('popupBox')";>Sample Job</p>
-  </div>
-
-
-<html>
-
-
-<!--
-Things to include:
-<ul>
-  <li>Job Title </li>
-  <li>Description</li>
-  <li>Category</li>
-  <li>Requirements</li>
-  <li>Location</li>
-  <li>Job Size</li>
-  <li>Contact</li>
-  <li>Tags</li>
-<ul>
--->
+</html>

@@ -9,6 +9,15 @@
 <body>
     <script type="text/javascript" src="/js/dist/feed.min.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <script type="text/javascript">
+        function toggle_visibility(id) {
+           var e = document.getElementById(id);
+           if(e.style.display == 'block')
+              e.style.display = 'none';
+           else
+              e.style.display = 'block';
+        }
+    </script>
     <section class="section">
         <div class="container">
             <h1 class="title" style="color:#EE6A50">Disaster Relief Tracker</h1>
@@ -20,14 +29,16 @@
     <div class="columns">
         <div class="column">
             <div class="searchUnit">
+                <a id="createJobLink" href="/create" class="button is-link">Add</a>
                 <button type="button" id="refreshJobs" class="button is-info">Refresh</button>
-                <input type="text" id="filter" placeholder="Search..." class="input is-primary" style="width:36.25%">
+                <input type="text" id="filter" placeholder="Search..." class="input is-primary" style="width:31%">
                 <button type="button" id="btnfilter" class="button is-primary">Filter</button> 
             </div>
             <div class="container" id="feed"></div>
         </div>
         <div class="column">
-            <div class="information"></div>
+            <div class="information">
+            </div>
         </div>
     </div>
 </body>

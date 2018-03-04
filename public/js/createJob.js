@@ -3,15 +3,38 @@ $ = require('jquery');
 var fs = require('fs');
 
 $(document).ready(function() {
-    var categories = JSON.parse(fs.readFileSync('./local/job_builder.json', 'utf8')).categories;
-    for (var c in categories) {
+    
+    localStorage.clear();
+    
+    var job_builder = JSON.parse(fs.readFileSync('./local/job_builder.json', 'utf8'));
+    updateCategories(job_builder);
+    updateJobSizes(job_builder);
+
+    
+    // Log new data in tmp.json
+    $('#createJobButton').click(function() {
+        // Probably should do some verification...
+        
+    });
+});
+
+/* 
+    Functions which update from job_builder config
+*/
+function updateCategories(d) {
+    for (var c in d.categories) {
         $('#categoriesSelector').append($('<option/>', {
-            value: c,
-            text: categories[c] 
+            value: d.categories[c],
+            text: d.categories[c] 
         }));
     }
+} 
 
-    // var data = fs.readFileSync('./local/tmp.json', 'utf8');
-    // var interact = JSON.parse(data);
-    // $('body').html(interact.requests[0].title);
-});
+function updateJobSizes(d) {
+   for (var c in d.sizes) {
+        $('#jobSizeSelector').append($('<option/>', {
+            value: parseInt(c) + 1,
+            text: d.sizes[c]
+        }));
+    } 
+}

@@ -7,7 +7,7 @@ var path = require('path');
 var fs = require('fs');
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 var route_handler = require('./router');
 app.use('/', route_handler);

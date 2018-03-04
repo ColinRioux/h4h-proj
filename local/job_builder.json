@@ -1,4 +1,4 @@
 {
     "categories": ["food", "water", "evacuation", "clothes", "power"],
-    "sizes": ["Small", "Medium", "Large", "Extra-Large"]
+    "sizes": ["Extra-Small", "Small", "Medium", "Large", "Extra-Large"]
 }

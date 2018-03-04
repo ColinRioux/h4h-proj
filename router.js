@@ -34,4 +34,8 @@ router.get('/update', function(req, res) {
     res.sendFile(path.join(__dirname + '/views/update.html'));
 });
 
+router.get('/requester', function(req, res) {
+    res.sendFile(path.join(__dirname + '/views/requester.html'));
+});
+
 module.exports = router;

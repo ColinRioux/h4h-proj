@@ -1,0 +1,41 @@
+ul.bxlc, .tgclist {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.tgclist li {
+    display: inline-block;
+}
+ul.bxlc li {
+    text-align: right;
+    display: inline-block;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    float: right;
+}
+div.jobCategory {
+    width: 100px;
+    height: 30px;
+    background-color:#EE6A50;
+    color:white;
+    border-radius: 20px;
+    text-align: center;
+    padding:2px;
+    vertical-align: middle;
+}
+div.jobTag {
+    height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#feed {
+    padding-left: 50px;
+    padding-top: 20px;
+    /*border-right: 1px gray solid;*/
+}
+
+div.box {
+    cursor: pointer;
+}

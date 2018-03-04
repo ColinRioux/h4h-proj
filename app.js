@@ -12,11 +12,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 var route_handler = require('./router');
 app.use('/', route_handler);
 
-var files = ['createJob', 'update'];
+var files = ['createJob', 'update', 'requester'];
 for (var f in files) {
     browserify('./public/js/' + files[f] + '.js').transform({global: true}, 'uglifyify').transform('brfs').bundle().pipe(fs.createWriteStream('./public/js/dist/' + files[f] + '.min.js'));
 }
-
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(function(req, res) {

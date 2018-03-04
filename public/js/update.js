@@ -24,7 +24,4 @@ $(document).ready(function(){
   document.getElementById("jobTitle").innerHTML = temp.requests[0].title;
   document.getElementById("organization").innerHTML = temp.requests[0].claimed;
   document.getElementById("deliveryStatus").innerHTML = temp.requests[0].status;
-  // $('.jobTitle').append("hi");
-  // $('.organization').append('<p>' + temp.requests[0].claim + '</p>');
-  // $('.deliveryStatus').append('<p>' + temp.requests[0].status + '</p>');
 });

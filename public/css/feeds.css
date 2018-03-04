@@ -33,6 +33,11 @@ div.jobTag {
 #feed {
     padding-left: 50px;
     padding-top: 20px;
+    /*border-right: 1px gray solid;*/
+}
+
+div.box {
+    cursor: pointer;
 }
 
 .searchUnit {

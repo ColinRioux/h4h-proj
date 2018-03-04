@@ -60,6 +60,8 @@ body{
 #popupContainer{
   background-color: #fff;
   padding: 20px;
+  height: 100%;
+  width: 100%;
 }
 
 #wrapper{

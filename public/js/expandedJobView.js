@@ -1,6 +1,18 @@
 $ = require('jquery');
 var fs = require('fs');
 
+function toggle_visibility(id) {
+   var e = document.getElementById(id);
+   if(e.style.display == 'block')
+      e.style.display = 'none';
+   else
+      e.style.display = 'block';
+}
+// function openNav() {
+//     document.getElementById("myNav").style.width = "100%";
+// }
+// toggle_visibility('popupBox');
+
 $(document).ready(function() {
   var tmp = JSON.parse(fs.readFileSync('./local/tmp.json', 'utf8'));
   $('.jobTitle').append('<h1 class="title is-1">' + tmp.requests[0].title + '</h1>');

@@ -22,7 +22,7 @@ app.set('etag', false);
 var route_handler = require('./router');
 app.use('/', route_handler);
 
-var files = ['createJob', 'feed'];
+var files = ['createJob', 'feed', 'expandedJobView'];
 for (var f in files) {
     browserify('./public/js/' + files[f] + '.js').transform({global: true}, 'uglifyify').transform('brfs').bundle().pipe(fs.createWriteStream('./public/js/dist/' + files[f] + '.min.js'));
 }

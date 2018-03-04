@@ -80,7 +80,7 @@ function buildFeedClaimed(selector) {
         // alert(JSON.stringify(a));
         $('.searchfield').html('');
         var search = $("#filter").val();
-        
+
         $(selector).html('');
         // $('.container').append('<p>' + search + '</p>');
         for (var i in tmp) {
@@ -91,17 +91,17 @@ function buildFeedClaimed(selector) {
                     var a = [];
                     a.push(request.category);
                     request.category = a;
-                } 
+                }
                 for (var j in request.category) {
                     $(selector).find('.' + request.id + '').find('.tgclist').append('<li><div class="jobCategory">' + request.category[j] + '</div></li>');
                 }
                 $(selector).find('.' + request.id + '').find('.tgclist').append('<li style="padding-left:30px;"><i class="fas fa-tags"></i></li>');
                 for (var k in request.tags) {
-                    $(selector).find('.' + request.id + '').find('.tgclist').append('<li><div class="jobTag">' + request.tags[k] + '</div></li>'); 
+                    $(selector).find('.' + request.id + '').find('.tgclist').append('<li><div class="jobTag">' + request.tags[k] + '</div></li>');
                 }
             }
         }
-        
+
     });
     return;
     // var tmp = JSON.parse(fs.readFileSync('./local/tmp.json', 'utf8'));

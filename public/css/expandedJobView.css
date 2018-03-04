@@ -1,6 +1,6 @@
 #overlay {
     position: fixed; /* Sit on top of the page content */
-    display: none; /* Hidden by default */
+    display: block; /* Appear by default */
     width: 100%; /* Full width (cover the whole page) */
     height: 100%; /* Full height (cover the whole page) */
     top: 0;
@@ -41,7 +41,7 @@ body{
 }
 
 .popupPosition{
-  display: none;
+  display: block;
   position: fixed;
   top:0;
   left:0;
@@ -85,7 +85,7 @@ body{
 
 .jobTitle{
   float:left;
-  width:70%;
+  width:70%
   text-indent: 4%;
   margin-left: 4%;
   padding-top: 10px;
@@ -174,7 +174,7 @@ body{
 .confirmJob input[type="submit"]{
   /* background-color:#333; */
   /* color:#fff; */
-  padding: 10px, 15px;
+  padding: 10px, 15px
   border:none;
   width: 150px;
   float: right;

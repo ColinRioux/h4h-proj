@@ -5,6 +5,15 @@ var bodyParser = require('body-parser');
 var browserify = require('browserify');
 var path = require('path');
 var fs = require('fs');
+var sqlite3 = require('sqlite3').verbose();
+
+var db = new sqlite3.Database('./local/main.db');
+db.serialize(function() {
+    // serialize table if it doesn't exist
+    db.run('CREATE TABLE IF NOT EXISTS requests (category TEXT, tags TEXT, title TEXT, description TEXT, location TEXT, size INTEGER, contact TEXT, time TEXT)');
+});
+db.close();
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -13,7 +22,7 @@ app.set('etag', false);
 var route_handler = require('./router');
 app.use('/', route_handler);
 
-var files = ['createJob', 'feed'];
+var files = ['createJob', 'feed', 'expandedJobView'];
 for (var f in files) {
     browserify('./public/js/' + files[f] + '.js').transform({global: true}, 'uglifyify').transform('brfs').bundle().pipe(fs.createWriteStream('./public/js/dist/' + files[f] + '.min.js'));
 }

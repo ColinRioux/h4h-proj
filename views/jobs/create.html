@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Create Form</title>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+</head>
+<body>
+    <script type="text/javascript" src="/js/dist/createJob.min.js"></script>
+    <div class="container" style="padding-left:200px;padding-right:200px;padding-top:50px">
+        <form action="/create/post" method="POST">
+            <div class="field">
+                <label class="label">Title</label>
+                <div class="control">
+                    <input class="input" id="titleInput" name="titleInput" type="text" placeholder="Enter a short title" required>
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Description</label>
+                <div class="control">
+                    <textarea class="textarea" id="descriptionInput" name="descriptionInput" placeholder="Enter a description..." required></textarea>
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Job Size</label>
+                <div class="control">
+                    <div class="select">
+                        <select id="jobSizeSelector" name="jobSizeSelector" required>
+                            <option selected>Select Size...</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Categories</label>
+                <div class="control">
+                    <div class="select is-multiple">
+                        <select multiple id="categoriesSelector" name="categoriesSelector" required>
+                            <option selected>Select Size...</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Location</label>
+                <div class="control">
+                    <input class="input" id="locationInput" name="locationInput" type="text" placeholder="Enter your Location..." required>
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Contact</label>
+                <div class="control">
+                    <textarea class="textarea" id="contactInput" name="contactInput" placeholder="Enter Contact Information..." required></textarea>
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Tags</label>
+                <div class="control">
+                    <input class="input" id="tagsInput" name="tagsInput" type="text" placeholder="Add tags separated by commas..." required>
+                </div>
+            </div>
+            <div class="field">
+                <button type="submit" class="button is-success" id="createJobButton">Create</button>
+                <a id="back" href="/" class="button is-link">Return</a>
+            </div>
+        </form>
+        <br/>
+    </div>           
+</body>
+</html>

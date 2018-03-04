@@ -54,7 +54,3 @@ function buildFeed(selector) {
     return;
     // var tmp = JSON.parse(fs.readFileSync('./local/tmp.json', 'utf8'));
 }
-
-function expandCard(id) {
-    window.location.replace('/job');
-}

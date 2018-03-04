@@ -1,0 +1,173 @@
+
+#overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+}
+
+
+#text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 50px;
+    color: white;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+}
+
+
+body{
+  background-color: #f4f4f4; /* Light Grey */
+  color: #555555; /* Dark Grey */
+
+  font-family: Arial, Helvetica, sans-serif; /* Perhaps change this later */
+  font-size: 16px;
+  font-weight:normal;
+
+  line-height: 1.4em; /* line spacing, em is line height */
+  margin-left: 2in;
+  margin-right: 2in;
+  margin-top: 0in;
+  margin-bottom:0;
+  padding: 15px;
+}
+
+.popupPosition{
+  display: none;
+  position: fixed;
+  top:0;
+  left:0;
+  background-color: rgba(0,0,0,.7);
+  width: 100%;
+  height: 100%;
+}
+
+#popupWrapper{
+  width: 960px;
+  margin: 40px auto;
+  text-align: left;
+}
+
+#popupContainer{
+  background-color: #fff;
+  padding: 20px;
+}
+
+#wrapper{
+  width: 200px;
+  margin: 40px auto;
+  text-align: left;
+}
+
+
+.clr{
+  clear:both;
+}
+
+
+#closeJob{
+  float:right;
+  margin-up:0;
+  margin-right:18px;
+}
+
+
+.jobTitle{
+  float:left;
+  width:70%
+  text-indent: 4%;
+  margin-left: 4%;
+
+  box-sizing: border-box;
+}
+
+.jobDescription{
+  width:95%;
+  margin:auto;
+}
+
+#jobCategory{
+  width:95%;
+  margin:auto;
+}
+
+#jobSize{
+  width: 170px;
+  padding: 0px 15px; /* top/bottom, left/right */
+  border: 5px #bbb solid;  /* Change color */
+  border-radius: 25px;
+  text-align:center;
+
+  float:right;
+  box-sizing: border-box;
+
+  margin-right: 35px;
+  margin-up: 50px;
+}
+
+.jobRequirements{
+  margin-left: 4%;
+  width: 67%;
+  float: left;
+  box-sizing: border-box;
+}
+
+#jobLocation{
+  width: 26%;
+  float: right;
+  text-align:center;
+  border-radius: 25px;
+  margin-right: 3%;
+
+  border: 5px #bbb solid;  /* Change color */
+  box-sizing: border-box;
+}
+
+.contactInformation{
+  margin-left: 5.5%;
+  border: 1px #ccc solid;
+  padding: 10px;
+  border-radius: 15px;
+  width: 60%;
+  float: left;
+}
+
+
+.confirmJob input[type="submit"]{
+  background-color:#333;
+  color:#fff;
+  padding: 10px, 15px
+  border:none;
+  width: 150px;
+  float: right;
+  margin-right:8%;
+  margin-top: 5.5%;
+  height: 75px;
+  font-size: 23px;
+  border-radius: 10px;
+}
+
+
+
+.contactInformation h4{   /* The Header */
+  text-align: center;
+  padding: 0;
+}
+
+.contactInformation ul{   /* List Items */
+  padding-left: 25px;
+  list-style: square;
+}
+
+.contactInformation li{   /* List itself */
+  padding: 3px 0px;
+}

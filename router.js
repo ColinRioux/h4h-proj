@@ -48,18 +48,20 @@ router.get('/requests/:id', function(req, res) {
         if (err) {
             console.log(err);
         } else {
-            res.send({
-                id: id,
-                title: row.title,
-                description: row.description,
-                location: row.location,
-                contact: row.contact,
-                size: row.size,
-                category: row.category.split(','),
-                tags: row.tags.split(','),
-                time: row.time,
-                claim: row.claim
-            });
+            if (row.hasOwnProperty('title')) {
+                res.send({
+                    id: id,
+                    title: row.title,
+                    description: row.description,
+                    location: row.location,
+                    contact: row.contact,
+                    size: row.size,
+                    category: row.category.split(','),
+                    tags: row.tags.split(','),
+                    time: row.time,
+                    claim: row.claim
+                }); 
+            }
         }
     });
     return;

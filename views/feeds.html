@@ -4,52 +4,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> Feeds </title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
-    <style>
-        ul.bxlc, .tgclist {
-            list-style-type: none;
-            margin: 0; 
-            padding: 0;
-        }
-
-        .tgclist li {
-            display: inline-block;
-        }
-        ul.bxlc li {
-            text-align: right;
-            display: inline-block;
-            padding-right: 10px;
-            padding-bottom: 10px;
-            float: right;
-        }
-        div.jobCategory {
-            width: 100px;
-            height: 30px;
-            background-color:#EE6A50;
-            color:white;
-            border-radius: 20px;
-            text-align: center;
-            padding:2px;
-            vertical-align: middle;
-        }
-        div.jobTag {
-            height: 30px;
-            padding-left: 10px;
-            padding-right: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="/css/feeds.css">
 </head>
 <body>
     <script type="text/javascript" src="/js/dist/feed.min.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-    <section class="section"></section>
     <section class="section">
-        <div class="container">  
-            <div class="supplies">
-                <div id="feed">
-
-                </div>
-            </div>
-        </div>
+        <div class="container"><h1 class="title" style="color:#EE6A50">Live Feed</h1></div>
     </section>
+    <hr>
+    <div class="columns">
+        <div class="column">
+            <div class="searchUnit">
+                <input type="text" id="filter" placeholder="Search...">
+                <button type="button" id="btnfilter">Filter</button> 
+            </div>
+            <div class="container" id="feed"></div>
+        </div>
+        <div class="column">
+            <div class="searchfield"></div>
+        </div>
+    </div>
 </body>
 </html>

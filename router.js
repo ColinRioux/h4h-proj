@@ -8,6 +8,14 @@ router.get('/create', function(req, res) {
     res.sendFile(path.join(__dirname + '/views/jobs/create.html'));
 });
 
+router.get('/feeds', function(req, res) {
+    res.sendFile(path.join(__dirname + '/views/feeds.html'));
+});
+
+router.get('/job', function(req, res) {
+    res.sendFile(path.join(__dirname + '/views/expandedJobView.html'));
+});
+
 router.post('/create/post', function(req,res) {
     // Create a req and store it in tmp
     console.log(req.body);

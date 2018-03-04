@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Job Title</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+
+  <meta name="Full Job Description" content="Full Job Description Page">
+  <meta name="keywords" content="[insert tags here]">
+
+  <link rel="stylesheet" type="text/css" href="css/expandedJobView.css">
+
+  </style>
+
+  <script type="text/javascript">
+<!--
+    function toggle_visibility(id) {
+       var e = document.getElementById(id);
+       if(e.style.display == 'block')
+          e.style.display = 'none';
+       else
+          e.style.display = 'block';
+    }
+//-->
+</script>
+
+
+
+</head>
+
+
+<body>
+  <!-- The button that opens the popup goes here -->
+    <div id="wrapper">
+        <p class="button is-link"><a href="javascript:void(0)" onclick="toggle_visibility('popupBox')";>Sample Job</p>
+    </div>
+
+  <script type="text/javascript" src="/js/dist/expandedJobView.min.js"></script>
+
+  <div id="popupBox" class="popupPosition">
+    <div id="popupWrapper">
+      <div id="popupContainer">
+          <div id="closeJob">
+            <p><a href="javascript:void(0)" onclick="toggle_visibility('popupBox')" class="delete is-medium" ></a></p>
+          </div>
+          <header>
+            <!-- Job Title -->
+            <div class="jobTitle">
+                <!-- <h1>Job Title Here</h1> -->
+            </div>
+
+            <!-- Job Size -->
+            <div id="jobSize" class="notification is-primary">
+              <!-- <p>Job size: 3</p> -->
+            </div>
+
+            <div class="clr"></div>
+
+            <!-- Job Description -->
+            <div class="jobDescription">
+              <!-- <p>[Job Description]: job description here</p> -->
+            <div>
+          </header>
+
+          <div style;"margin-top:50px;"></div>
+
+          <!-- Categories are: Transportation, Food, Water, Clothing, Power, Evac -->
+          <div id="jobCategory">
+              <!-- <h3>Category: [insert category here]</h3> -->
+          </div>
+
+          <div style;"margin-top:20px;"></div>
+
+
+            <!-- Requirements -->
+            <!--
+            <div class="jobRequirements">
+              <b><strong>Job Requirements</strong></b>
+                <ul>
+                  <li>Requirement 1</li>
+                  <li>Requirement 2</li>
+                  <li>Requirement 3</li>
+                </ul>
+            </div> -->
+
+
+          <!-- Location -->
+          <div id="jobLocation">
+            <!-- <p><b><strong>Job Location: </strong></b><br> [insert location here]</p> -->
+          </div>
+
+
+          <!-- Contact Info -->
+          <div class="contactInformation">
+            <!-- <h4>Requesting Organization Contact Information:</h4> -->
+              <!--<ul>
+                <li>Country: [country]</li>
+                <li>Phone Number: [phone number]</li>
+                <li>Email: [email]</li>
+              </ul> -->
+          </div>
+
+          <div class="clr"></div>
+
+          <!-- Confirm Button -->
+          <div class="confirmJob">
+            <input class="button is-dark" type="submit" value="Confirm" name = "">
+          </div>
+
+          <div class="clr"></div>
+
+          <br>
+
+          <!-- Tags -->
+          <div class="tags">
+            <p>Tags: </p>
+              <!-- <small>Tags: [insert tags here]</small> -->
+          </div>
+
+          <br>
+          <div class="date">
+              <!-- <small>Posted on [Date]</small> -->
+          </div>
+
+
+          <footer id="mainFooter">
+            <small>Copyright &copy; 2018, Colin, Charles, Melanie, Horatio, Tim - H4H at SCU</small>
+          </footer>
+        </body>
+
+      </div> <!-- popupContainer end -->
+    </div> <!-- popupWrapper end -->
+  </div> <!-- popupBox end -->
+
+<html>

@@ -86,7 +86,7 @@ body{
 
 .jobTitle{
   float:left;
-  width:70%
+  width:70%;
   text-indent: 4%;
   margin-left: 4%;
   padding-top: 10px;
@@ -175,7 +175,7 @@ body{
 .confirmJob input[type="submit"]{
   /* background-color:#333; */
   /* color:#fff; */
-  padding: 10px, 15px
+  padding: 10px, 15px;
   border:none;
   width: 150px;
   float: right;

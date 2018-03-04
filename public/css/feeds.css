@@ -6,6 +6,7 @@ ul.bxlc, .tgclist {
 
 .tgclist li {
     display: inline-block;
+    padding-right: 10px;
 }
 ul.bxlc li {
     text-align: right;
@@ -15,11 +16,12 @@ ul.bxlc li {
     float: right;
 }
 div.jobCategory {
-    width: 100px;
+    /*width: 100px;*/
+    width: max-content;
     height: 30px;
     background-color:#EE6A50;
     color:white;
-    border-radius: 20px;
+    border-radius: 5px;
     text-align: center;
     padding:2px;
     vertical-align: middle;

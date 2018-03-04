@@ -10,7 +10,7 @@ var sqlite3 = require('sqlite3').verbose();
 var db = new sqlite3.Database('./local/main.db');
 db.serialize(function() {
     // serialize table if it doesn't exist
-    db.run('CREATE TABLE IF NOT EXISTS requests (category TEXT, tags TEXT, title TEXT, description TEXT, location TEXT, size INTEGER, contact TEXT, time TEXT)');
+    db.run('CREATE TABLE IF NOT EXISTS requests (category TEXT, tags TEXT, title TEXT, description TEXT, location TEXT, size INTEGER, contact TEXT, time TEXT, claim TEXT)');
 });
 db.close();
 

@@ -17,28 +17,12 @@ router.get('/create', function(req, res) {
 router.post('/create/post', function(req,res) {
     // Create a req and store it in tmp
     console.log(req.body);
-    // var cur = JSON.parse(fs.readFileSync('./local/tmp.json', 'utf8'));
-    // cur.requests.push({
-    //     id: cur.requests.length,
-    //     category: req.body.categoriesSelector,
-    //     tags: req.body.tagsInput.split(','),
-    //     title: req.body.titleInput,
-    //     description: req.body.descriptionInput,
-    //     location: req.body.locationInput,
-    //     size: req.body.jobSizeSelector,
-    //     contact: req.body.contactInput,
-    //     time: new Date(Date.now()).toLocaleString(),
-    //     claim: null,
-    //     status: null
-    // });
-    // fs.writeFile('./local/tmp.json', JSON.stringify(cur));
     if (typeof req.body.categoriesSelector == 'string') {
         var a = [];
         a.push(req.body.categoriesSelector);
         req.body.categoriesSelector = a;
     }
-    db.run('INSERT INTO requests (category, tags, title, description, location, size, contact, time) VALUES (?,?,?,?,?,?,?,?)', req.body.categoriesSelector.join(','), req.body.tagsInput, req.body.titleInput, req.body.descriptionInput, req.body.locationInput, parseInt(req.body.jobSizeSelector), req.body.contactInput, new Date(Date.now()).toLocaleString());
-    // browserify('./public/js/feed.js').transform({global: true}, 'uglifyify').transform('brfs').bundle().pipe(fs.createWriteStream('./public/js/dist/feed.min.js'));
+    db.run('INSERT INTO requests (category, tags, title, description, location, size, contact, time, claim) VALUES (?,?,?,?,?,?,?,?,?)', req.body.categoriesSelector.join(','), req.body.tagsInput, req.body.titleInput, req.body.descriptionInput, req.body.locationInput, parseInt(req.body.jobSizeSelector), req.body.contactInput, new Date(Date.now()).toLocaleString(), 'null');
     res.redirect('/');
 });
 
@@ -47,10 +31,6 @@ router.get('/job', function(req, res) {
 });
 
 router.get('/', function(req, res) {
-    // browserify('./public/js/feed.js').transform({global: true}, 'uglifyify').transform('brfs').bundle().pipe(fs.createWriteStream('./public/js/dist/feed.min.js'));
-    // res.set('Content-Type', 'text/html');
-    // var html = fs.readFileSync('./views/feeds.html');
-    // res.send(html);
     res.sendFile(path.join(__dirname + '/views/feeds.html'));
 });
 
@@ -69,7 +49,8 @@ router.get('/requests/:id', function(req, res) {
                 size: row.size,
                 category: row.category.split(','),
                 tags: row.tags.split(','),
-                time: row.time
+                time: row.time,
+                claim: row.claim
             });
         }
     });
@@ -86,6 +67,16 @@ router.get('/requests', function(req, res) {
             });
         }
     });
+    return;
+});
+
+router.get('/requests/claim/:id/:org', function(req,res) {
+    var id = req.params.id;
+    var organization = req.params.org + '';
+    db.run('UPDATE requests SET claim=? WHERE rowid=?', organization, id, function(err, rows) {
+        if (err) console.log(err);
+    });
+    res.redirect('/');
     return;
 });
 module.exports = router;

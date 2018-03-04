@@ -2,13 +2,16 @@
 <html>
 <head>
   <title>Job Title</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+
   <meta name="Full Job Description" content="Full Job Description Page">
   <meta name="keywords" content="[insert tags here]">
 
   <link rel="stylesheet" type="text/css" href="/css/expandedJobView.css">
 
   </style>
-
 
   <script type="text/javascript">
 <!--
@@ -39,15 +42,16 @@
     <div id="popupWrapper">
       <div id="popupContainer">
           <div id="closeJob">
-            <p><a href="javascript:void(0)" onclick="toggle_visibility('popupBox')"><img src="/img/cancelButton.png"></a></p>
+            <p><a href="javascript:void(0)" onclick="toggle_visibility('popupBox')" class="delete is-medium" ></a></p>
           </div>
           <header>
             <!-- Job Title -->
             <div class="jobTitle">
                 <!-- <h1>Job Title Here</h1> -->
             </div>
+
             <!-- Job Size -->
-            <div id="jobSize">
+            <div id="jobSize" class="notification is-primary">
               <!-- <p>Job size: 3</p> -->
             </div>
 
@@ -59,7 +63,7 @@
             <div>
           </header>
 
-          <div style;"margin-top:20px;"></div>
+          <div style;"margin-top:50px;"></div>
 
           <!-- Categories are: Transportation, Food, Water, Clothing, Power, Evac -->
           <div id="jobCategory">
@@ -86,8 +90,7 @@
             <!-- <p><b><strong>Job Location: </strong></b><br> [insert location here]</p> -->
           </div>
 
-          <div class="clr"></div>
-
+        
           <!-- Contact Info -->
           <div class="contactInformation">
             <!-- <h4>Requesting Organization Contact Information:</h4> -->
@@ -98,10 +101,11 @@
               </ul> -->
           </div>
 
+          <div class="clr"></div>
 
           <!-- Confirm Button -->
           <div class="confirmJob">
-            <input class="button" type="submit" value="Confirm" name = "">
+            <input class="button is-dark" type="submit" value="Confirm" name = "">
           </div>
 
           <div class="clr"></div>
@@ -110,6 +114,7 @@
 
           <!-- Tags -->
           <div class="tags">
+            <p>Tags: </p>
               <!-- <small>Tags: [insert tags here]</small> -->
           </div>
 
@@ -120,7 +125,7 @@
 
 
           <footer id="mainFooter">
-            <p>Copyright &copy; 2018, Colin, Charles, Melanie, Horatio, Tim - H4H at SCU</p>
+            <small>Copyright &copy; 2018, Colin, Charles, Melanie, Horatio, Tim - H4H at SCU</small>
           </footer>
         </body>
 
@@ -129,18 +134,3 @@
   </div> <!-- popupBox end -->
 
 <html>
-
-
-<!--
-Things to include:
-<ul>
-  <li>Job Title </li>
-  <li>Description</li>
-  <li>Category</li>
-  <li>Requirements</li>
-  <li>Location</li>
-  <li>Job Size</li>
-  <li>Contact</li>
-  <li>Tags</li>
-<ul>
--->

@@ -1,12 +1,3 @@
-# h4h-proj
+# Sync-whole
 
-hello world
-hi charles <3
-Charles
-
-Tim
-
-Horatio
-Horatio #2
-
-/\/\ |= |_ /-\ /|/ | |=
+Sync-whole is a private communication mediator which interfaces outreach organizations (such as the Red Cross) with local governments/organizations which need help. In order to get access, organizations are required to get verified.

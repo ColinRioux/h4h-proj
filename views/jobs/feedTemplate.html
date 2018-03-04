@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feed Box</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+    <style>
+        ul.bxlc, .tgclist {
+            list-style-type: none;
+            margin: 0; 
+            padding: 0;
+        }
+
+        .tgclist li {
+            display: inline-block;
+        }
+        ul.bxlc li {
+            text-align: right;
+            display: inline-block;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            float: right;
+        }
+        div.jobCategory {
+            width: 100px;
+            height: 30px;
+            background-color:#EE6A50;
+            color:white;
+            border-radius: 20px;
+            text-align: center;
+            padding:2px;
+            vertical-align: middle;
+        }
+        div.jobTag {
+            height: 30px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <script type="text/javascript" src="/js/dist/createJob.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <section class="section"></section>
+    <section class="section">
+        <div class="container">
+            <div class="box" style="width:50%;">
+                <h1 class="title is-4">BLAH BALH BLAH TEXTY TEXT</h1>
+                <ul class="bxlc">
+                    <li><i class="fas fa-users"></i> Size: XL</li>
+                    <li><i class="fas fa-map-marker"></i> Location: SCU</li>
+                </ul>
+                <br/>
+                <p style="padding-top:2%">still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+                <br/>
+                <ul class="tgclist">
+                    <li><div class="jobCategory">Food</div></li>
+                    <li style="padding-left:30px;"><i class="fas fa-tags"></i></li>
+                    <li><div class="jobTag">T1</div></li>
+                    <li><div class="jobTag">T2</div></li>
+                    <li><div class="jobTag">T3</div></li>
+                    <li><div class="jobTag">T4</div></li>
+                    <li><div class="jobTag">T5</div></li>
+                </ul> 
+            </div>
+        </div>
+    </section>
+</body>
+</html>

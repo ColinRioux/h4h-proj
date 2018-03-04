@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 var route_handler = require('./router');
 app.use('/', route_handler);
 
-var files = ['createJob'];
+var files = ['createJob', 'feed'];
 for (var f in files) {
     browserify('./public/js/' + files[f] + '.js').transform({global: true}, 'uglifyify').transform('brfs').bundle().pipe(fs.createWriteStream('./public/js/dist/' + files[f] + '.min.js'));
 }

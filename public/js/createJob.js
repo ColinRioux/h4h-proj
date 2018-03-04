@@ -1,21 +1,11 @@
-// index.html home page stuffs
+// handle jobs
 $ = require('jquery');
 var fs = require('fs');
 
 $(document).ready(function() {
-    
-    localStorage.clear();
-    
     var job_builder = JSON.parse(fs.readFileSync('./local/job_builder.json', 'utf8'));
     updateCategories(job_builder);
     updateJobSizes(job_builder);
-
-    
-    // Log new data in tmp.json
-    $('#createJobButton').click(function() {
-        // Probably should do some verification...
-        
-    });
 });
 
 /* 

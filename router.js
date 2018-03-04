@@ -8,6 +8,10 @@ router.get('/create', function(req, res) {
     res.sendFile(path.join(__dirname + '/views/jobs/create.html'));
 });
 
+router.get('/feeds', function(req, res) {
+    res.sendFile(path.join(__dirname + '/views/feeds.html'));
+});
+
 router.post('/create/post', function(req,res) {
     // Create a req and store it in tmp
     console.log(req.body);
@@ -20,7 +24,10 @@ router.post('/create/post', function(req,res) {
         description: req.body.descriptionInput,
         location: req.body.locationInput,
         size: req.body.jobSizeSelector,
-        contact: req.body.contactInput
+        contact: req.body.contactInput,
+        time: new Date(Date.now()).toLocaleString(),
+        claim: null,
+        status: null
     });
     fs.writeFile('./local/tmp.json', JSON.stringify(cur));
     res.redirect('/create');

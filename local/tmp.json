@@ -3,24 +3,28 @@
         {
             "id": 0,
             "category": [],
-            "tags": [],
+            "tags": ["Food", "Evac"],
             "title": "Example title",
             "description": "Long ass description",
             "requirements": [],
             "location": "",
             "size": 3,
-            "contact": ""
+            "contact": "",
+            "claimed": "",
+            "status": "unclaimed"
         },
         {
             "id": 1,
             "category": [],
-            "tags": [],
+            "tags": ["Clothes", "Food"],
             "title": "Example title 2",
             "description": "Long ass description",
             "requirements": [],
             "location": "",
             "size": 3,
-            "contact": ""
+            "contact": "",
+            "claimed": "",
+            "status": "unclaimed"
         }
     ]    
 }

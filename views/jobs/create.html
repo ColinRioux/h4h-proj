@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
+</head>
+<body>
+    <script type="text/javascript" src="/js/dist/createJob.min.js"></script>
+    <div class="container">
+        <form>
+            <div class="form-group row">
+                <label for="titleInput" class="col-sm-2 col-form-label">Title</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" id="job titleInput" placeholder="Enter a short title..."> 
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="descriptionInput" class="col-sm-2 col-form-label">Description</label>
+                <div class="col-sm-6">
+                    <textarea class="form-control" rows="3" placeholder="Enter a description..." required></textarea>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="jobSizeSelector" class="col-sm-2 col-form-label">Job Size</label>
+                <div class="col-sm-6">
+                    <select class="form-control" id="jobSizeSelector">
+                          <option selected>Select Size...</option>
+                          <option value="1">Small</option>
+                          <option value="2">Medium</option>
+                          <option value="3">Large</option>
+                          <option value="4">Extra-Large</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="categoriesSelector" class="col-sm-2 col-form-label">Category</label>
+                <div class="col-sm-6">
+                    <select class="form-control" id="categoriesSelector">
+                        <!-- Will do the appending in createJob.js -->
+                        <option selected>Select Categories...</option>
+                    </select>
+                </div>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-outline-primary">Create</button>
+        </form>
+    </div>
+</body>
+</html>

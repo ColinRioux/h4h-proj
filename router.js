@@ -2,6 +2,10 @@ var express = require('express');
 var router = express.Router();
 var path = require('path');
 
+router.get('/create', function(req, res) {
+    res.sendFile(path.join(__dirname + '/views/jobs/create.html'));
+});
+
 router.get('/', function(req, res) {
     res.sendFile(path.join(__dirname + '/views/index.html'));
 });

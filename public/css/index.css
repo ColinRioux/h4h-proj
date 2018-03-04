@@ -1,3 +1,32 @@
 body {
-    background-color: red;
+    background-image: url("images/background-dark/footer_lodyas/footer_lodyas.png");
+    min-height: 100%;
 }
+
+.container{
+	width: 100%;
+}
+.requests{
+}
+/*Request panels*/
+.supplies, .evacuations, .medical, .equipment{
+	width: 25%;
+	background-color: gainsboro;
+	float: left;
+	text-align: center;
+} 
+/*.evacuations{
+	width: 20%;
+	background-color: gainsboro;
+	float: left;
+}
+.medical{
+	width: 20%;
+	background-color: gainsboro;
+	float: left;
+}
+.equipment{
+	width: 20%;
+	background-color: gainsboro;
+	float: left;
+}*/
